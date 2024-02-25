@@ -8,24 +8,26 @@ body {
 .header{
     border-radius: 30px;
     background: beige;
-    padding: 8px;
+    padding: 16px;
     margin: 8px;
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 32px;
 }
 
+.header.recipe {
+    justify-content: space-between;
+}
 
-ul {
+.buttons ul {
     padding: 0;
     display: flex;
     justify-content: space-between;
     
 }
 
-li {
-    border-radius: 30px;
-    background: rgb(245, 245, 166);
+.buttons li {
     font-size: 24px;
     list-style: none;
     height: 100px;
@@ -35,12 +37,24 @@ li {
     width: 30vw;
 }
 
+.recipe li {
+    margin-bottom: 24px;
+}
+
+.recipe h3 {
+    text-align: center;
+    font-size: 24px;
+    text-decoration: underline;
+}
+
 a {
     text-decoration: none;
     color: rgb(85, 85, 85);
-    
     transition: all 0.2s ease;
+    background: rgb(235, 235, 146);
+    border-radius: 30px;
 }
+
  .footer {
     border-radius: 10px;
     margin-top: auto;
@@ -51,17 +65,20 @@ a {
     height: 80px;
     padding: 0px 32px;
     font-size: 24px;
-    font-weight: 700;
-    
+    font-weight: 550;
  }
 
- #homepage {
-    background:rgb(245, 245, 166);
-    padding: 8px;
-    border-radius: 16px;
-    transition: all 0.2s ease;
- }
+#name, #date {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+#date {
+    text-align: right;
+}
+#homepage {
+    padding: 8px 16px;
+}
 
- a:hover, #homepage:hover {
+a:hover, #homepage:hover {
     filter: brightness(0.8);
- }
+}
